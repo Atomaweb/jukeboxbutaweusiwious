@@ -1274,6 +1274,7 @@ export class Config {
 	    //50 and 100 are from dogebox
     ]);
 
+	// still used for drumsets
     public static readonly envelopes: DictionaryArray<Envelope> = toNameMap([
         { name: "none", type: EnvelopeType.none, speed: 0.0 },
         { name: "note size", type: EnvelopeType.noteSize, speed: 0.0 },
@@ -1301,6 +1302,7 @@ export class Config {
         { name: "decay 1", type: EnvelopeType.decay, speed: 10.0 },
         { name: "decay 2", type: EnvelopeType.decay, speed: 7.0 },
         { name: "decay 3", type: EnvelopeType.decay, speed: 4.0 },
+		{ name: "wibble-2😶", type: EnvelopeType.wibble, speed: 128.0 },
         { name: "wibble-1", type: EnvelopeType.wibble, speed: 96.0 },
         { name: "wibble 1", type: EnvelopeType.wibble, speed: 24.0 },
         { name: "wibble 2", type: EnvelopeType.wibble, speed: 12.0 },
@@ -1341,6 +1343,18 @@ export class Config {
         { name: "blip 2", type: EnvelopeType.blip, speed: 16.0 },
         { name: "blip 3", type: EnvelopeType.blip, speed: 32.0 },
     ]);
+	public static readonly newEnvelopes: DictionaryArray<Envelope> = toNameMap([
+        { name: "none", type: EnvelopeType.none, speed: 0.0 },
+        { name: "note size", type: EnvelopeType.noteSize, speed: 0.0 },
+        { name: "punch", type: EnvelopeType.punch, speed: 0.0 },
+        { name: "flare", type: EnvelopeType.flare, speed: 32.0 },
+        { name: "twang", type: EnvelopeType.twang, speed: 32.0 },
+        { name: "swell", type: EnvelopeType.swell, speed: 32.0 },
+        { name: "lfo", type: EnvelopeType.tremolo, speed: 4.0 },
+        { name: "decay", type: EnvelopeType.decay, speed: 10.0 },
+		{ name: "wibble", type: EnvelopeType.wibble, speed: 24.0 },
+        { name: "linear", type: EnvelopeType.linear, speed: 32.0 },
+        { name: "rise", type: EnvelopeType.rise, speed: 32.0 },
 	public static readonly feedbacks: DictionaryArray<Feedback> = toNameMap([
 		{ name: "1⟲", indices: [[1], [], [], []] },
 		{ name: "2⟲", indices: [[], [2], [], []] },
