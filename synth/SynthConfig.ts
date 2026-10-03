@@ -105,6 +105,12 @@ export const enum EffectType {
     transition,
     chord,
     // If you add more, you'll also have to extend the bitfield used in Base64 which currently uses two six-bit characters.
+	noteRange, //no longer just a placeholder :3
+    ringModulation,
+    granular,
+    phaser,
+    octaveShift, //Studio Box port placeholder just in case
+    invertWave,
     length,
 }
 
@@ -120,12 +126,36 @@ export const enum EnvelopeComputeIndex {
     pitchShift,
     detune,
     vibratoDepth,
+	//vibratoSpeed, doesn't follow normal envelope pattern; will figure out. //if you fix this you need to update the url
     noteFilterFreq0, noteFilterFreq1, noteFilterFreq2, noteFilterFreq3, noteFilterFreq4, noteFilterFreq5, noteFilterFreq6, noteFilterFreq7,
     noteFilterGain0, noteFilterGain1, noteFilterGain2, noteFilterGain3, noteFilterGain4, noteFilterGain5, noteFilterGain6, noteFilterGain7,
     decimalOffset,
     supersawDynamism,
 	supersawSpread,
 	supersawShape,
+	panning,
+    distortion,
+    bitcrusherQuantization,
+    bitcrusherFrequency,
+    chorus,
+    echoSustain,
+    reverb,
+    arpeggioSpeed,
+    ringModulation,
+    ringModulationHz,
+    granular,
+    grainAmount,
+    grainSize,
+    grainRange,
+    echoDelay,
+    //Add more here
+
+    phaserFreq,
+    phaserMix,
+    phaserFeedback,
+    phaserStages,
+    invertWave,
+
     length,
 }
 
