@@ -73,6 +73,7 @@ export const enum InstrumentType {
     customChipWave,
     mod,
 	fm6op,
+	fm2op, 
     length,
 }
 
@@ -1094,17 +1095,17 @@ export class Config {
         { name: "delayed", amplitude: 0.3, type: 0, delayTicks: 37 }, // It will fade in over the previous two ticks.
         { name: "heavy", amplitude: 0.45, type: 0, delayTicks: 0 },
         { name: "shaky", amplitude: 0.1, type: 1, delayTicks: 0 },
-			//    { name: "very shaky", amplitude: 1, type: 0, delayTicks: 0 },
-	//{ name: "insane", amplitude: 10, type: 1, delayTicks: 0 },
+        { name: "very shaky", amplitude: 1, type: 0, delayTicks: 0 },
+	    { name: "insane", amplitude: 10, type: 1, delayTicks: 0 },
 	    //todbox vibratos
-	//	{ name: "super insane", amplitude: 30, type: 1, delayTicks: 1 },
+	    { name: "super insane", amplitude: 30, type: 1, delayTicks: 1 },
 		//wackybox
-	//	 { name: "quiver", amplitude: 0.001, type: 0, delayTicks: 0 },
-      //  { name: "wub-wub", amplitude: 10.0, type: 0, delayTicks: 0 },
-   //     { name: "quiver delayed", amplitude: 0.001, type: 0, delayTicks: 18 },
-      //  { name: "vibrate", amplitude: 0.08, type: 0, delayTicks: 0 },
-    //    { name: "too much wub", amplitude: 30.0, type: 0, delayTicks: 18 },
-	 //too much wub breaks things just a little bit at it's original amplitude
+    	{ name: "quiver", amplitude: 0.001, type: 0, delayTicks: 0 },
+        { name: "wub-wub", amplitude: 10.0, type: 0, delayTicks: 0 },
+        { name: "quiver delayed", amplitude: 0.001, type: 0, delayTicks: 18 },
+        { name: "vibrate", amplitude: 0.08, type: 0, delayTicks: 0 },
+        { name: "too much wub", amplitude: 30.0, type: 0, delayTicks: 18 },
+	    //too much wub breaks things just a little bit at it's original amplitude
 		//sandbox
 	]);
 	public static readonly vibratoTypes: DictionaryArray<VibratoType> = toNameMap([
@@ -1758,7 +1759,7 @@ export function getDrumWave(index: number, inverseRealFourierTransform: Function
             }
         }
         else if (index == 11) {
-            var drumBuffer = 1;
+            var drumBuffer = 1;         
             for (var i = 0; i < Config.chipNoiseLength; i++) {
                 wave[i] = Math.round((drumBuffer & 1));
                 var newBuffer = drumBuffer >> 1;
